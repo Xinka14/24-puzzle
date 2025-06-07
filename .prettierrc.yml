@@ -1,0 +1,16 @@
+printWidth: 1000
+tabWidth: 2
+useTabs: false
+semi: true
+singleQuote: true
+quoteProps: as-needed
+jsxSingleQuote: true
+trailingComma: all
+bracketSpacing: true
+bracketSameLine: true
+arrowParens: always
+proseWrap: preserve
+htmlWhitespaceSensitivity: ignore
+vueIndentScriptAndStyle: false
+endOfLine: lf
+embeddedLanguageFormatting: auto
