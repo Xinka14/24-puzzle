@@ -1,0 +1,15 @@
+root = true
+
+# 基本的に全てのファイルのインデントを2にする
+# 例外の物を別途に記載する
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Markdownでは行末のスペースは改行を表す
+[*.md]
+trim_trailing_whitespace = false
