@@ -24,6 +24,7 @@
       "purpose": "maskable"
     }
   ],
+  "scope": "/24-puzzle/",
   "start_url": "/24-puzzle/index.html",
   "display": "standalone"
 }
