@@ -11,7 +11,7 @@ export default function useCard() {
   }
 
   function getImageUrl({ number, suit }) {
-    return `/cards/${number}${suit}.svg`;
+    return `/24-puzzle/cards/${number}${suit}.svg`;
   }
 
   return {
