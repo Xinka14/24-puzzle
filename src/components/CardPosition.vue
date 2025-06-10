@@ -30,7 +30,7 @@ function toggle() {
 </script>
 
 <template>
-  <div class="tw:w-full tw:h-full tw:border tw:rounded" @click.stop="toggle">
-    <img v-if="img" :src="img" />
+  <div @click.stop="toggle">
+    <img v-if="img" :src="img" class="tw:border tw:rounded" />
   </div>
 </template>
