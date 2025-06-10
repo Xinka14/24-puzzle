@@ -9,7 +9,8 @@
     "build": "vite build",
     "format": "prettier . -w",
     "lint": "eslint",
-    "test": "vitest"
+    "test": "vitest",
+    "assets": "pwa-assets-generator --preset minimal-2023 public/logo.svg"
   },
   "lint-staged": {
     "*": [
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.28.0",
+    "@vite-pwa/assets-generator": "^1.0.0",
     "@vitejs/plugin-vue": "^5.2.3",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
