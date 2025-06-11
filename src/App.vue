@@ -20,6 +20,18 @@ const candidateSolutions = computed(() => {
   return solve(cards.value.map((c) => c.number));
 });
 
+const answer = computed(() => {
+  if (candidateSolutions.value === null) {
+    return null;
+  }
+
+  if (candidateSolutions.value.length === 0) {
+    return '解けない';
+  }
+
+  return candidateSolutions.value[0].replaceAll('*', '×').replaceAll('/', '÷');
+});
+
 function selectCard(card) {
   const found = cards.value.findIndex((card) => card === null);
   if (found === -1) {
@@ -48,8 +60,7 @@ function clear() {
         <img v-for="(card, index) in candidateCards" :key="index" :src="getImageUrl(card)" class="tw:border tw:rounded" @click.stop="selectCard(card)" />
       </div>
       <div v-else class="tw:w-full tw:px-4 tw:flex tw:justify-between tw:items-center">
-        <p v-if="candidateSolutions.length === 0" class="tw:text-2xl">解答がありません</p>
-        <p v-else class="tw:text-4xl">{{ candidateSolutions[0] }}</p>
+        <p class="tw:text-4xl">{{ answer }}</p>
         <button class="tw:text-4xl" @click.stop="clear">🔄</button>
       </div>
     </div>

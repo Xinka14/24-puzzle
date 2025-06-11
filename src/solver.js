@@ -3,8 +3,8 @@ import Decimal from 'decimal.js';
 const PRECEDENSE = {
   '+': 1,
   '-': 1,
-  '×': 2,
-  '÷': 2,
+  '*': 2,
+  '/': 2,
 };
 
 /**
@@ -158,10 +158,10 @@ function isCorrectExpression(tokens) {
         case '-':
           result = num2.minus(num1);
           break;
-        case '×':
+        case '*':
           result = num2.times(num1);
           break;
-        case '÷':
+        case '/':
           if (num1.isZero()) {
             return false; // division by zero
           }
