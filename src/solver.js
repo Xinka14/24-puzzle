@@ -156,6 +156,9 @@ function isCorrectExpression(tokens) {
           result = num2.plus(num1);
           break;
         case '-':
+          if (num1.greaterThan(num2)) {
+            return false; // no minus result
+          }
           result = num2.minus(num1);
           break;
         case '*':
